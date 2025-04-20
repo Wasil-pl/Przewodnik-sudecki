@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Alfa Slab One';
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src: url('/fonts/AlfaSlabOne-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DCC Ash';
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src: url('/fonts/DCC-Ash.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('/fonts/Montserrat-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url('/fonts/Montserrat-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url('/fonts/Montserrat-Black.woff2') format('woff2');
+}
+
+$color-primary: #deb37e;
+$color-secondary: #10335d;
+
+$color-text-dark: #141414;
+$color-text-dark-light: #1b1b1b;
+$color-text-light: #e7e7e7;
+$color-text-light-dark: #bbbaba;
+$color-text-danger: #ff0000;
+$color-text-success: #00ff00;
+$color-text-primary: $color-primary;
+$color-text-secondary: $color-secondary;
+
+$color-background-light: #ffffff;
+$color-background-lighter: #f7f7f7;
+$color-background-dark: #191d28;
+$color-background-primary: $color-primary;
+$color-background-secondary: $color-secondary;
+$color-background-secondary-transparent: rgba($color-secondary, 0.65);
+
+// $font-header: 'Alfa Slab One', sans-serif;
+$font-header: 'DCC Ash', sans-serif;
+$font-body: 'Montserrat', serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+$transition_0_3: all 0.3s ease-in-out;
+

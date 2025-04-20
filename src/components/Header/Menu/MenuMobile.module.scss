@@ -1,0 +1,46 @@
+@use '../../../styles/settings.scss' as settings;
+
+.canvas_button {
+  background-color: transparent;
+  border-color: settings.$color-background-lighter;
+  color: settings.$color-text-light;
+  font-size: 1.2rem;
+  padding: 1px 10px 5px 10px;
+
+  &:hover {
+    border-color: settings.$color-primary;
+    color: settings.$color-primary;
+    background-color: transparent;
+  }
+}
+
+.menu_wrapper {
+  display: flex;
+  flex-direction: column;
+
+  svg {
+    font-size: 30px;
+  }
+
+  .menu_image {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .lang {
+    display: flex;
+    justify-content: flex-end !important;
+
+    & > a {
+      margin-left: 10px;
+      color: settings.$color-text-dark;
+      font-weight: settings.$font-weight-bold;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    & > a.active {
+      color: settings.$color-primary;
+    }
+  }
+}

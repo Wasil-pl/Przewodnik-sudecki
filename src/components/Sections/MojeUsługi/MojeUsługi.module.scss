@@ -1,0 +1,35 @@
+@use '../../../styles/settings.scss' as settings;
+
+.myServices {
+  background-color: settings.$color-background-secondary;
+  padding: 250px 0 200px;
+  position: relative;
+
+  .shapeDividerTop {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    fill: settings.$color-background-light;
+  }
+
+  .shapeDividerBottom {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    fill: settings.$color-background-light;
+  }
+
+  .text_info {
+    p {
+      color: settings.$color-text-light;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use './settings.scss' as settings;
+@use './typography.scss' as typography;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: settings.$color-text-dark;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  overflow-y: scroll;
+  min-height: 100vh;
+  overflow-x: hidden !important;
+  overflow: auto;
+  font-family: settings.$font-body;
+}
+
+em {
+  font-style: normal;
+}
+
+.color_primary {
+  color: settings.$color-primary !important;
+}
+
+.no_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+
+    textarea {
+      font-size: 16px !important;
+    }
+
+    input {
+      font-size: 16px !important;
+    }
+  }
+}
+

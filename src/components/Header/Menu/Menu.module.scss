@@ -1,0 +1,33 @@
+@use '../../../styles/settings.scss' as settings;
+
+.menu {
+  .logo {
+    margin: 0 10px;
+  }
+}
+
+.scrolled {
+  background: settings.$color-background-secondary-transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  .logo {
+    margin: 0 5px;
+
+    img {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
+
+.menu_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 992px) {
+  .menu_wrapper {
+    flex-direction: row;
+  }
+}

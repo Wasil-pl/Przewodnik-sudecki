@@ -1,0 +1,62 @@
+@use '../../../styles/settings.scss' as settings;
+
+.arrowButton {
+  color: settings.$color-text-light;
+  font-size: 3rem;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    font-size: 3.5rem;
+    color: settings.$color-primary;
+  }
+}
+
+.arrowButtonPrev {
+  left: 10%;
+  top: 40%;
+}
+.arrowButtonNext {
+  right: 10%;
+  top: 40%;
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+
+  .dotInActive {
+    width: 1rem;
+    height: 1rem;
+    background-color: settings.$color-text-light;
+    border-radius: 50%;
+    color: settings.$color-text-light;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: settings.$color-primary;
+      color: settings.$color-primary;
+      transform: scale(1.2);
+    }
+  }
+
+  .dotActive {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: settings.$color-primary;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

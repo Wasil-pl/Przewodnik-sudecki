@@ -1,0 +1,41 @@
+@use '../../../styles/settings.scss' as settings;
+
+.navbar .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .container .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar .container .navbar-nav a {
+  color: settings.$color-text-light;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  text-shadow: 2 2 5px settings.$color-text-dark;
+}
+
+.navbar .container .navbar-nav a svg {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.navbar .container .navbar-nav a:hover {
+  color: settings.$color-text-primary;
+}
+
+.navbar .container .navbar-nav .dropdown .dropdown-item {
+  width: auto;
+}
+
+.navbar .container .navbar-nav .dropdown .dropdown-menu {
+  background-color: settings.$color-background-secondary;
+  border-top: 2px solid settings.$color-text-primary;
+}
+
+.dropdown-item:hover {
+  background-color: unset;
+}

@@ -1,0 +1,115 @@
+@use '../../../styles/settings.scss' as settings;
+
+.thumbs_container {
+  display: flex;
+
+  .wrapper {
+    .thumbs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 0 auto;
+      padding: 20px;
+
+      .image_button {
+        position: relative;
+
+        .text_on_image {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-family: 'Alfa Slab One', sans-serif;
+          font-size: 1.2rem;
+          color: settings.$color-text-dark;
+        }
+
+        &:nth-child(1) {
+          transform: rotate(-2deg);
+        }
+
+        &:nth-child(2) {
+          transform: rotate(1.5deg);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-1.5deg);
+        }
+
+        &:nth-child(4) {
+          transform: rotate(2deg);
+        }
+
+        &:nth-child(5) {
+          transform: rotate(-1deg);
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .content_tab {
+      padding: 50px;
+      margin: 40px 0;
+
+      .image_button {
+        position: relative;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      .content_images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 50px 0 20px;
+        flex-wrap: wrap;
+
+        img {
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      h4 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 2rem;
+        color: settings.$color-text-primary;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-family: 'Montserrat', serif;
+        font-size: 1.2rem;
+        color: settings.$color-text-light;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .tab_content {
+    flex-direction: column-reverse;
+
+    .tab_content_right {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
