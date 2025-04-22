@@ -2,12 +2,14 @@ import React, { useRef } from 'react';
 import * as styles from './Headers.module.scss';
 import { useMediaQuery } from 'react-responsive';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Lottie from 'lottie-react';
+import animationData from '../../../assets/scrool_down.json';
 
 const HeaderSecond = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-  const headerRef = useRef(null);
+  const headerRefSecond = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: headerRef,
+    target: headerRefSecond,
     offset: ['start start', 'end start'],
   });
 
@@ -15,7 +17,7 @@ const HeaderSecond = () => {
   const textY = useTransform(scrollYProgress, [0, 0.5], ['0%', '300%']);
 
   return (
-    <header ref={headerRef} className={`${styles.header} ${styles.second}`}>
+    <div ref={headerRefSecond} className={`${styles.header} ${styles.second}`}>
       <motion.div style={{ y: textY }} className={`${styles.content} ${styles.second}`}>
         {!isMobile && (
           <h2
@@ -24,6 +26,7 @@ const HeaderSecond = () => {
             data-sal-duration="2000"
             data-sal-easing="ease-out-cubic"
             className={styles.title}
+            aria-label="Skalne Miasta Sudetów"
           >
             Skalne Miasta Sudetów
           </h2>
@@ -35,6 +38,7 @@ const HeaderSecond = () => {
             data-sal-duration="2000"
             data-sal-easing="ease-out-cubic"
             className={styles.title}
+            aria-label="Skalne Miasta Sudetów"
           >
             Skalne Miasta
             <br />
@@ -59,9 +63,13 @@ const HeaderSecond = () => {
         </div>
       </div>
 
+      <div className={`${styles.lottie}  ${styles.second}`}>
+        <Lottie animationData={animationData} loop={true} autoplay={true} />
+      </div>
+
       <motion.div style={{ y: backgroundY }} className={`${styles.background} ${styles.second}`} />
       <div className={`${styles.foreground} ${styles.second}`} />
-    </header>
+    </div>
   );
 };
 

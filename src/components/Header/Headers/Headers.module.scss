@@ -68,13 +68,26 @@
     }
 
     .title {
-      font-size: 7rem;
+      font-size: 10rem;
       letter-spacing: 0.6rem;
       text-transform: uppercase;
       line-height: 1.2;
       text-wrap: nowrap;
-      color: settings.$color-text-primary;
-      text-shadow: rgba(0, 0, 0, 0.75) 5px 0px 10px;
+      color: settings.$color-text-primary-transparent;
+      // text-shadow: rgba(0, 0, 0, 0.75) 2px 2px 4px;
+
+      font-family: settings.$font-hero-title;
+
+      // background: linear-gradient(
+      //   to bottom,
+      //   rgba(213, 151, 75, 1) 0%,
+      //   rgba(213, 151, 75, 0.66) 25%,
+      //   rgba(213, 151, 75, 0.308) 50%,
+      //   rgba(213, 151, 75, 0.1) 75%,
+      //   rgba(213, 151, 75, 0) 100%
+      // );
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
@@ -84,9 +97,9 @@
       margin-top: 1rem;
       line-height: 1.2;
       letter-spacing: 0.2rem;
-      color: settings.$color-text-secondary;
       text-transform: uppercase;
-      text-shadow: 1px 1px 3px rgba(43, 42, 42, 0.5);
+      color: settings.$color-text-secondary;
+      // text-shadow: 1px 1px 3px rgba(43, 42, 42, 0.5);
     }
 
     .subtitle.second {
@@ -128,5 +141,24 @@
         text-shadow: 1px 1px 3px rgba(43, 42, 42, 0.5);
       }
     }
+  }
+
+  .lottie {
+    position: absolute;
+    z-index: 5;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 35px;
+    height: auto;
+    pointer-events: none;
+
+    svg path {
+      fill: settings.$color-background-light;
+    }
+  }
+
+  .lottie.second {
+    bottom: 50%;
   }
 }

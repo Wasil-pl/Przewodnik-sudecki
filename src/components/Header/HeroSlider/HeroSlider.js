@@ -7,6 +7,7 @@ import HeaderHome from '../Headers/HeaderHome';
 import HeaderSecond from '../Headers/HeaderSecond';
 import ShapeDivider from '../../../svg/Zasob2-01.svg';
 import HeroSliderControls from '../HeroSliderControls/HeroSliderControls';
+import HeroContactBar from '../HeroContactBar/HeroContactBar';
 
 const SLIDE_DURATION = 8000;
 const TRANSITION_DURATION = 1.5;
@@ -20,7 +21,6 @@ const sliderVariants = {
   incoming: (direction) => ({
     x: direction > 0 ? '100%' : '-100%',
     scale: 1,
-    opacity: 0,
   }),
   active: {
     x: 0,
@@ -30,7 +30,6 @@ const sliderVariants = {
   exit: (direction) => ({
     x: direction > 0 ? '-100%' : '100%',
     scale: 1,
-    opacity: 0.3,
   }),
 };
 
@@ -66,7 +65,7 @@ const HeroSlider = () => {
   }, [index]);
 
   return (
-    <div className={styles.heroSlider} style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
+    <header className={styles.heroSlider}>
       <div className={styles.shapeDivider}>
         <ShapeDivider />
       </div>
@@ -103,7 +102,9 @@ const HeroSlider = () => {
         resetTrigger={index}
         duration={SLIDE_DURATION * 1000}
       />
-    </div>
+
+      <HeroContactBar />
+    </header>
   );
 };
 

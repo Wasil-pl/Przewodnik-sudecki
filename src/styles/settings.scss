@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Alfa Slab One';
+  font-family: 'Anton';
   font-style: normal;
   font-display: swap;
   font-weight: normal;
-  src: url('/fonts/AlfaSlabOne-Regular.woff2') format('woff2');
+  src: url('/fonts/Anton-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -58,6 +58,10 @@ $color-text-success: #00ff00;
 $color-text-primary: $color-primary;
 $color-text-secondary: $color-secondary;
 
+$color-text-primary-transparent: rgba($color-primary, 0.45);
+$color-text-title-background-transparent: rgba($color-primary, 0.1);
+$color-text-title-white-background-transparent: rgba($color-text-light, 0.1);
+
 $color-background-light: #ffffff;
 $color-background-lighter: #f7f7f7;
 $color-background-dark: #191d28;
@@ -68,6 +72,7 @@ $color-background-secondary-transparent: rgba($color-secondary, 0.65);
 // $font-header: 'Alfa Slab One', sans-serif;
 $font-header: 'DCC Ash', sans-serif;
 $font-body: 'Montserrat', serif;
+$font-hero-title: 'Anton', sans-serif;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;

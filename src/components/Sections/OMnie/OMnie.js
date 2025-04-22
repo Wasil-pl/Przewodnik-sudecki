@@ -24,7 +24,12 @@ const OMnie = () => {
   return (
     <section ref={sectionAboutMeRef} id="omnie" className={styles.about_me}>
       <Container>
-        <TytułSekcji title="Poznaj mnie" coloredText=" bliżej" subtitle="przewodnik sudecki Michał Filipowicz" />
+        <TytułSekcji
+          title="Poznaj mnie"
+          coloredText=" bliżej"
+          subtitle="przewodnik sudecki Michał Filipowicz"
+          backgroundText="O mnie"
+        />
         <div className={styles.wrapper}>
           <motion.div style={{ x: leftX }} className={styles.first_column}>
             <h4>Cześć</h4>
@@ -74,20 +79,39 @@ const OMnie = () => {
             </p>
 
             <div className={styles.uprawnienia}>
-              <StaticImage
-                src="../../../images/przewodniksudecki.png"
-                alt="Uprawnienia przewodnika sudeckiego, górskiego na obszar Sudetów klasy III wydane przez Marszałka Województwa Dolnośląskiego. Numer uprawnień 60/LG/2019."
-                placeholder="blurred"
-                width={150}
-                quality={100}
-              />
+              <div className={styles.uprawnienia_loga}>
+                <StaticImage
+                  src="../../../images/przewodniksudecki.png"
+                  alt="Uprawnienia przewodnika sudeckiego, górskiego na obszar Sudetów klasy III wydane przez Marszałka Województwa Dolnośląskiego. Numer uprawnień 60/LG/2019."
+                  placeholder="blurred"
+                  width={150}
+                  quality={100}
+                />
 
-              <p>
-                <strong>
-                  Uprawnienia przewodnika sudeckiego, górskiego na obszar Sudetów klasy III wydane przez Marszałka
-                  Województwa Dolnośląskiego. Numer uprawnień 60/LG/2019.
-                </strong>
-              </p>
+                <StaticImage
+                  src="../../../images/logo_sitn.png"
+                  alt="logo SITN"
+                  placeholder="blurred"
+                  width={150}
+                  quality={100}
+                />
+
+                <StaticImage
+                  src="../../../images/logo_instruktor.png"
+                  alt="logo instruktor narciarstwa zjazdowego, biegowego i skiturowego"
+                  placeholder="blurred"
+                  width={130}
+                  quality={100}
+                />
+              </div>
+              <div className={styles.uprawnienia_text}>
+                <p>
+                  <strong>
+                    Uprawnienia przewodnika sudeckiego, górskiego na obszar Sudetów klasy III wydane przez Marszałka
+                    Województwa Dolnośląskiego. Numer uprawnień 60/LG/2019.
+                  </strong>
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

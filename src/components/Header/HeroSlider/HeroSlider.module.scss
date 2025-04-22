@@ -1,9 +1,9 @@
 @use '../../../styles/settings.scss' as settings;
 
 .heroSlider {
-  position: 'relative';
-  height: '100vh';
-  overflow: 'hidden';
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 
   .shapeDivider {
     position: absolute;

@@ -6,6 +6,7 @@ import Menu from '../components/Header/Menu/Menu';
 import OMnie from '../components/Sections/OMnie/OMnie';
 import MojeUsługi from '../components/Sections/MojeUsługi/MojeUsługi';
 import HeroSlider from '../components/Header/HeroSlider/HeroSlider';
+import MojeWycieczki from '../components/Sections/MojeWycieczki/MojeWycieczki';
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = () => {
       <HeroSlider />
       <OMnie />
       <MojeUsługi />
+      <MojeWycieczki />
     </>
   );
 };

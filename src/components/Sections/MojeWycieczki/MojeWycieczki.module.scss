@@ -1,0 +1,54 @@
+@use '../../../styles/settings.scss' as settings;
+
+.my_trips {
+  padding: 150px 0 100px;
+  position: relative;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 100px;
+
+    .row {
+      display: flex;
+
+      .first_column {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        flex: 50%;
+
+        h4 {
+          font-size: 2.5rem;
+          font-weight: settings.$font-weight-bold;
+          color: settings.$color-text-primary;
+          margin-bottom: 20px;
+        }
+
+        p {
+          color: settings.$color-text-dark;
+          margin-bottom: 20px;
+        }
+      }
+
+      .second_column {
+        flex: 50%;
+
+        .imageWrapper {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          .image {
+          }
+        }
+      }
+    }
+
+    .row_reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}

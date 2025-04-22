@@ -12,10 +12,15 @@
 .navbar .container .navbar-nav a {
   color: settings.$color-text-light;
   font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding: 0 15px;
+  margin: 10px 0;
   font-weight: 600;
-  margin: 0 1rem;
   text-transform: uppercase;
-  text-shadow: 2 2 5px settings.$color-text-dark;
+
+  &:not(:last-child) {
+    border-right: 1px solid settings.$color-text-light;
+  }
 }
 
 .navbar .container .navbar-nav a svg {

@@ -1,0 +1,25 @@
+@use '../../../styles/settings.scss' as settings;
+
+.contact_bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  background-color: settings.$color-background-secondary-transparent;
+  color: settings.$color-text-light;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  z-index: 10;
+
+  .contact_item {
+    margin: 20px 0;
+    transform: rotate(180deg); // odwracamy tekst w pionie
+  }
+}

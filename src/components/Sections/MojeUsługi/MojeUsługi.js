@@ -14,6 +14,7 @@ const MojeUsługi = () => {
           title="Wycieczki po Sudetach z "
           coloredText="przewodnikiem sudeckim"
           subtitle="Góry Stołowe, czeskie Skalne Miasta, Karkonosze, Góry Sowie – wybierz kierunek i wyrusz ze mną na niezapomnianą wycieczkę."
+          backgroundText="Oferta"
           variant="white"
         />
 

@@ -48,16 +48,27 @@
         justify-content: center;
         margin-bottom: 50px;
       }
+
       .uprawnienia {
-        max-width: 400px;
         margin: 100px auto 0;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        p {
-          text-align: center;
-          margin-top: 20px;
+        .uprawnienia_loga {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .uprawnienia_text {
+          max-width: 500px;
+
+          p {
+            text-align: center;
+            margin-top: 20px;
+          }
         }
       }
     }
