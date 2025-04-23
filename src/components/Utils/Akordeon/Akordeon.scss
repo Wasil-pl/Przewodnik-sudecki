@@ -1,0 +1,76 @@
+@use '../../../styles/settings.scss' as settings;
+
+.accordion {
+  border: none;
+  background: transparent;
+
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid settings.$color-border-light;
+    border-radius: 0;
+    background-color: transparent;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      .accordion-button {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 1rem 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: settings.$color-text-dark;
+        box-shadow: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: settings.$color-text-primary;
+        }
+
+        &:not(.collapsed) {
+          background-color: transparent;
+          color: settings.$color-text-primary;
+          box-shadow: none;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &::after {
+          filter: brightness(0) saturate(100%) invert(37%) sepia(6%) saturate(166%) hue-rotate(168deg) brightness(95%)
+            contrast(92%);
+          transition: filter 0.3s ease;
+        }
+
+        &:not(.collapsed)::after {
+          filter: brightness(0) saturate(100%) invert(20%) sepia(98%) saturate(667%) hue-rotate(185deg) brightness(90%)
+            contrast(90%);
+        }
+      }
+    }
+
+    .accordion-body {
+      background-color: transparent;
+      padding: 0 0 1rem 0;
+      color: settings.$color-text-dark-light;
+      font-size: 1rem;
+
+      p {
+        margin-bottom: 0.75rem;
+      }
+
+      ul {
+        padding-left: 1rem;
+
+        li {
+          list-style-type: disc;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -24,7 +24,19 @@ const MenuMobile = ({ active }) => {
               <StaticImage src="../../../images/przewodniksudecki.png" alt="logo" width={150} />
             </Navbar.Brand>
             <Nav>
-              <Nav.Link className={active === 'kontakt' ? 'activeMenuItem' : ''} href="/kontakt/">
+              <Nav.Link href="#omnie" className={active === 'omnie' ? styles.active : ''}>
+                O Mnie
+              </Nav.Link>
+              <Nav.Link href="#oferta" className={active === 'oferta' ? styles.active : ''}>
+                Oferta
+              </Nav.Link>
+              <Nav.Link href="#wycieczki" className={active === 'wycieczki' ? styles.active : ''}>
+                Wycieczki
+              </Nav.Link>
+              <Nav.Link href="#cennik" className={active === 'cennik' ? styles.active : ''}>
+                Cennik
+              </Nav.Link>
+              <Nav.Link href="#kontakt" className={active === 'kontakt' ? styles.active : ''}>
                 Kontakt
               </Nav.Link>
             </Nav>

@@ -7,6 +7,10 @@ import OMnie from '../components/Sections/OMnie/OMnie';
 import MojeUsługi from '../components/Sections/MojeUsługi/MojeUsługi';
 import HeroSlider from '../components/Header/HeroSlider/HeroSlider';
 import MojeWycieczki from '../components/Sections/MojeWycieczki/MojeWycieczki';
+import Cennik from '../components/Sections/Cennik/Cennik';
+import Kontakt from '../components/Sections/Kontakt/Kontakt';
+import ScroolUpButton from '../components/Utils/ScroolUpButton/ScroolUpButton';
+import Footer from '../components/Footer/Footer/Footer';
 
 const IndexPage = () => {
   return (
@@ -16,6 +20,10 @@ const IndexPage = () => {
       <OMnie />
       <MojeUsługi />
       <MojeWycieczki />
+      <Cennik />
+      <Kontakt />
+      <Footer />
+      <ScroolUpButton />
     </>
   );
 };

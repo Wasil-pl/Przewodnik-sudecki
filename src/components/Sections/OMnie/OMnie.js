@@ -22,7 +22,7 @@ const OMnie = () => {
   const rightX = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
   const nextRowY = useTransform(nextRowProgress, [0, 1], ['200px', '0px']);
   return (
-    <section ref={sectionAboutMeRef} id="omnie" className={styles.about_me}>
+    <section id="omnie" className={styles.about_me}>
       <Container>
         <TytułSekcji
           title="Poznaj mnie"
@@ -30,7 +30,7 @@ const OMnie = () => {
           subtitle="przewodnik sudecki Michał Filipowicz"
           backgroundText="O mnie"
         />
-        <div className={styles.wrapper}>
+        <div ref={sectionAboutMeRef} className={styles.wrapper}>
           <motion.div style={{ x: leftX }} className={styles.first_column}>
             <h4>Cześć</h4>
             <p>

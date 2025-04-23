@@ -37,7 +37,7 @@ const MojeUsługiThumbs = () => {
               placeholder="blurred"
               layout="constrained"
             />
-            <div className={styles.text_on_image}>Skalne Miasta</div>
+            <div className={styles.text_on_image}>Góry Stołowe i czeskie Skalne Miasta</div>
           </button>
 
           <button onClick={() => handleTabClick('karkonosze')} className={`no_button ${styles.image_button}`}>
@@ -70,7 +70,7 @@ const MojeUsługiThumbs = () => {
               placeholder="blurred"
               layout="constrained"
             />
-            <div className={styles.text_on_image}>Zamki i Fortyfikacje</div>
+            <div className={styles.text_on_image}>Zamki i fortyfikacje polowe</div>
           </button>
 
           <button onClick={() => handleTabClick('aktywne')} className={`no_button ${styles.image_button}`}>
@@ -81,14 +81,14 @@ const MojeUsługiThumbs = () => {
               placeholder="blurred"
               layout="constrained"
             />
-            <div className={styles.text_on_image}>Wycieczki aktywne</div>
+            <div className={styles.text_on_image}>Wycieczki biegowe i rowerowe</div>
           </button>
         </div>
 
         <div id="content_tab" className={styles.content_tab}>
           {activeTab === 'skalne' && (
             <div>
-              <h4>Skalne Miasta</h4>
+              <h4>Góry Stołowe i czeskie Skalne Miasta</h4>
               {skalne_miasta.map((paragraph, index) => (
                 <p key={index}>
                   {paragraph}
@@ -268,7 +268,7 @@ const MojeUsługiThumbs = () => {
           )}
           {activeTab === 'zamki' && (
             <div>
-              <h4>Zamki i Fortyfikacje</h4>
+              <h4>Zamki i Fortyfikacje polowe</h4>
               {zamki.map((paragraph, index) => (
                 <p key={index}>
                   {paragraph}
@@ -322,7 +322,7 @@ const MojeUsługiThumbs = () => {
           )}
           {activeTab === 'aktywne' && (
             <div>
-              <h4>Wycieczki aktywne</h4>
+              <h4>Wycieczki biegowe i rowerowe</h4>
               {aktywne.map((paragraph, index) => (
                 <p key={index}>
                   {paragraph}

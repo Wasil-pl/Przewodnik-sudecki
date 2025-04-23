@@ -1,0 +1,118 @@
+@use '../../../styles/settings.scss' as settings;
+
+.contact {
+  padding: 150px 0 250px;
+  background-color: settings.$color-background-secondary;
+  position: relative;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .form_wrapper {
+      flex: calc(50% - 20px);
+      background-color: settings.$color-background-light;
+      border-radius: 24px;
+      padding: 40px 60px;
+      color: settings.$color-text-dark;
+
+      h4 {
+        font-size: 2rem;
+        margin: 0 0 20px 0;
+        font-weight: 600;
+        color: settings.$color-text-secondary;
+      }
+
+      .form {
+        .form_group {
+          margin-bottom: 20px;
+
+          label {
+            font-size: 0.8rem;
+            margin-bottom: 1px;
+          }
+        }
+
+        .button {
+          border-radius: 5px;
+          border: 1px solid settings.$color-background-secondary;
+          font-size: 1rem;
+          background-color: unset;
+          width: fit-content;
+          text-transform: uppercase;
+          padding: 10px 20px;
+          color: settings.$color-text-secondary;
+          text-decoration: none;
+          margin-left: 50%;
+          transform: translateX(-50%);
+
+          &:hover {
+            color: settings.$color-text-primary;
+            border: 1px solid settings.$color-text-primary;
+          }
+        }
+
+        .dark {
+          border: 1px solid settings.$color-background-dark;
+          color: settings.$color-text-dark;
+
+          &:hover {
+            background-color: settings.$color-background-dark;
+            color: settings.$color-text-primary;
+          }
+        }
+      }
+    }
+
+    .info_wrapper {
+      flex: calc(50% - 20px);
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .info_item {
+          text-align: center;
+          margin-bottom: 50px;
+
+          svg {
+            font-size: 45px;
+          }
+
+          p {
+            font-size: 1rem;
+            margin: 10px 0;
+            font-size: 24px;
+          }
+
+          a {
+            text-decoration: none;
+            color: settings.$color-text-light;
+
+            &:hover {
+              color: settings.$color-text-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .shapeDivider {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    fill: settings.$color-background-dark;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    margin: 200px 0 100px 0;
+  }
+}
