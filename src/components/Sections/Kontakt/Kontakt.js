@@ -156,18 +156,18 @@ const Kontakt = () => {
 
             <div className={styles.info}>
               <div data-sal="slide-left" data-sal-delay="100" data-sal-duration="1000" className={styles.info_item}>
-                <a href="tel:+48733542926">
+                <a href="tel:+48574708808">
                   <TelephoneFill />
                   <p>Telefon</p>
-                  +48 733 542 926
+                  +48 574 708 808
                 </a>
               </div>
 
               <div data-sal="slide-left" data-sal-delay="100" data-sal-duration="1000" className={styles.info_item}>
-                <a href="mailto:nowoczesnawitryna@gmail.com">
+                <a href="mailto:kontakt@przewodnik-skalnemiasto.pl">
                   <EnvelopeFill />
                   <p>E-mail</p>
-                  nowoczesnawitryna@gmail.com
+                  kontakt@przewodnik-skalnemiasto.pl
                 </a>
               </div>
             </div>

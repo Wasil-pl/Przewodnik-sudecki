@@ -111,8 +111,18 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .contact {
-    margin: 200px 0 100px 0;
+    padding: 100px 0 100px;
+
+    .shapeDivider {
+      bottom: -1px;
+      width: 150%;
+    }
+
+    .wrapper {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 }

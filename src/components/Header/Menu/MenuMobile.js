@@ -5,7 +5,7 @@ import './MenuMobile.scss';
 import { List } from 'react-bootstrap-icons';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const MenuMobile = ({ active }) => {
+const MenuMobile = ({ isScrolled }) => {
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
@@ -13,7 +13,12 @@ const MenuMobile = ({ active }) => {
 
   return (
     <>
-      <Button className={styles.canvas_button} variant="primary" onClick={handleShow} aria-label="Menu">
+      <Button
+        className={`${styles.canvas_button} ${isScrolled ? styles.scrolled : ''}`}
+        variant="primary"
+        onClick={handleShow}
+        aria-label="Menu"
+      >
         <List />
       </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end">
@@ -21,22 +26,23 @@ const MenuMobile = ({ active }) => {
         <Offcanvas.Body>
           <div className={styles.menu_wrapper}>
             <Navbar.Brand href="/" className={styles.menu_image}>
-              <StaticImage src="../../../images/przewodniksudecki.png" alt="logo" width={150} />
+              <StaticImage src="../../../images/przewodniksudecki.png" alt="logo" width={135} />
+              <StaticImage src="../../../images/PTTK-LOGO.png" alt="logo" width={150} />
             </Navbar.Brand>
             <Nav>
-              <Nav.Link href="#omnie" className={active === 'omnie' ? styles.active : ''}>
+              <Nav.Link href="/#omnie" onClick={handleClose}>
                 O Mnie
               </Nav.Link>
-              <Nav.Link href="#oferta" className={active === 'oferta' ? styles.active : ''}>
+              <Nav.Link href="/#oferta" onClick={handleClose}>
                 Oferta
               </Nav.Link>
-              <Nav.Link href="#wycieczki" className={active === 'wycieczki' ? styles.active : ''}>
+              <Nav.Link href="/#wycieczki" onClick={handleClose}>
                 Wycieczki
               </Nav.Link>
-              <Nav.Link href="#cennik" className={active === 'cennik' ? styles.active : ''}>
+              <Nav.Link href="/#cennik" onClick={handleClose}>
                 Cennik
               </Nav.Link>
-              <Nav.Link href="#kontakt" className={active === 'kontakt' ? styles.active : ''}>
+              <Nav.Link href="/#kontakt" onClick={handleClose}>
                 Kontakt
               </Nav.Link>
             </Nav>

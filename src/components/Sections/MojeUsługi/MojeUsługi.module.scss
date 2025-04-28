@@ -33,3 +33,25 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .myServices {
+    padding: 150px 0 100px;
+
+    .shapeDividerBottom {
+      bottom: -1px;
+      width: 150%;
+    }
+
+    .shapeDividerTop {
+      top: -1px;
+      width: 150%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .myServices {
+    padding: 100px 0 50px;
+  }
+}

@@ -29,7 +29,7 @@
       h4 {
         font-size: 2.5rem;
         font-weight: settings.$font-weight-bold;
-        color: settings.$color-text-primary;
+        color: settings.$color-text-secondary;
         margin-bottom: 20px;
       }
 
@@ -76,21 +76,50 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .about_me {
+    padding: 100px 0 50px;
+
     .wrapper {
       flex-direction: column;
+      align-items: center;
 
       .first_column {
+        padding-right: 0;
+        text-align: center;
         margin-bottom: 50px;
-        padding: 0 20px;
-        .image {
-          width: 100%;
-        }
       }
 
       .second_column {
-        padding: 0 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
+      .next_row {
+        .next_row_image {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about_me {
+    padding: 50px 0 30px;
+
+    .wrapper {
+      .next_row {
+        .uprawnienia {
+          .uprawnienia_loga {
+            gap: 0;
+            img {
+              padding: 20px;
+            }
+          }
+        }
       }
     }
   }

@@ -8,8 +8,8 @@
 }
 
 html {
-  font-size: 16px;
   overflow-x: hidden !important;
+  font-size: 16px;
 }
 
 body {
@@ -29,6 +29,20 @@ em {
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.invisible_text {
+  display: none;
+}
+
 .color_primary {
   color: settings.$color-primary !important;
 }
@@ -38,6 +52,18 @@ em {
   border: none;
   cursor: pointer;
   padding: 0;
+}
+
+@media (min-resolution: 1.25dppx) and (max-resolution: 1.49dppx) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+  html {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 768px) {

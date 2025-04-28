@@ -1,0 +1,51 @@
+@use '../../../styles/settings.scss' as settings;
+
+.sliderWrapper {
+  .bootstrapCarousel {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    .imageButton {
+      position: relative;
+      transform: rotate(-2deg);
+      max-width: 350px;
+      padding: 30px;
+
+      .textOnImage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 1rem;
+        color: settings.$color-text-dark;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .imageButton2 {
+      transform: rotate(1.5deg);
+    }
+
+    .imageButton3 {
+      transform: rotate(-1.5deg);
+    }
+
+    .imageButton4 {
+      transform: rotate(2deg);
+    }
+
+    .imageButton5 {
+      transform: rotate(-1deg);
+    }
+  }
+}

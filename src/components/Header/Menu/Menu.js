@@ -28,26 +28,28 @@ const Menu = () => {
   return (
     <Navbar data-bs-theme="dark" expand="lg" fixed="top" className={scrollY > 50 ? styles.scrolled : styles.menu}>
       <Container>
-        <Navbar.Brand href="/">
-          <StaticImage
-            className={styles.logo}
-            src="../../../images/przewodniksudecki.png"
-            alt="logo"
-            width={70}
-            quality={100}
-          />
-          <StaticImage
-            className={styles.logo}
-            src="../../../images/PTTK-LOGO.png"
-            alt="logo"
-            width={70}
-            quality={100}
-          />
-        </Navbar.Brand>
+        {isDesktop && (
+          <Navbar.Brand href="/">
+            <StaticImage
+              className={styles.logo}
+              src="../../../images/przewodniksudecki.png"
+              alt="logo"
+              width={70}
+              quality={100}
+            />
+            <StaticImage
+              className={styles.logo}
+              src="../../../images/PTTK-LOGO.png"
+              alt="logo"
+              width={70}
+              quality={100}
+            />
+          </Navbar.Brand>
+        )}
 
         <div className={styles.menu_wrapper}>
           {isDesktop && <MenuDeskopt />}
-          {isMobile && <MenuMobile />}
+          {isMobile && <MenuMobile isScrolled={scrollY > 50} />}
         </div>
       </Container>
     </Navbar>

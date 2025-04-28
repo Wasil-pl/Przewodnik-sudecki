@@ -23,7 +23,7 @@
         h4 {
           font-size: 2rem;
           font-weight: settings.$font-weight-bold;
-          color: settings.$color-text-primary;
+          color: settings.$color-text-secondary;
           margin-bottom: 40px;
         }
 
@@ -52,6 +52,56 @@
 
     .row_reverse {
       flex-direction: row-reverse;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .my_trips {
+    padding: 100px 0 50px;
+
+    .wrapper {
+      gap: 50px;
+
+      .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .first_column {
+          padding: 0;
+          flex: none;
+        }
+
+        .second_column {
+          flex: none;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .my_trips {
+    .wrapper {
+      gap: 20px;
+
+      .row {
+        .first_column {
+          h4 {
+            font-size: 1.5rem;
+          }
+        }
+
+        .second_column {
+          .imageWrapper {
+            .image_bottom {
+              margin-top: -100px;
+            }
+          }
+        }
+      }
     }
   }
 }

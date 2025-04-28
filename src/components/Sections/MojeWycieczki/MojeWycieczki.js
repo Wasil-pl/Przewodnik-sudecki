@@ -1,29 +1,12 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import * as styles from './MojeWycieczki.module.scss';
 import { Container } from 'react-bootstrap';
 import TytułSekcji from '../../Ui/TytułSekcji/TytułSekcji';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
 import Akordeon from '../../Utils/Akordeon/Akordeon';
 import { tripDataChild } from '../../../consts/moje_wycieczki_dzieci';
 
 const MojeWycieczki = () => {
-  const sectionMyTripRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionMyTripRef,
-    offset: ['start end', 'center end'],
-  });
-
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    target: sectionMyTripRef,
-    offset: ['end end', 'center end'],
-  });
-
-  const leftX = useTransform(scrollYProgress, [0, 1], ['-100%', '0%']);
-  const rightX = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
-  const nextLeftX = useTransform(scrollYProgress2, [0, 1], ['0%', '-100%']);
-  const nextRightX = useTransform(scrollYProgress2, [0, 1], ['0%', '100%']);
-
   return (
     <section id="wycieczki" className={styles.my_trips}>
       <Container>
@@ -33,10 +16,16 @@ const MojeWycieczki = () => {
           subtitle="Góry mogą być fascynującą lekcją przyrody i historii – zapraszam na wyprawy dla dzieci, młodzieży i grup zorganizowanych."
           backgroundText="Wycieczki"
         />
-        <div ref={sectionMyTripRef} className={styles.wrapper}>
+        <div className={styles.wrapper}>
           <div className={styles.row}>
-            <motion.div style={{ x: leftX }} className={styles.first_column}>
-              <div className={styles.content}>
+            <div
+              data-sal="slide-right"
+              data-sal-delay="100"
+              data-sal-duration="800"
+              data-sal-easing="ease-in-out"
+              className={styles.first_column}
+            >
+              <div>
                 <h4>Wycieczki z dziećmi</h4>
                 <p>
                   Organizuję profesjonalne <strong>wycieczki dla szkół, kolonii, obozów i klubów sportowych</strong> po
@@ -53,8 +42,14 @@ const MojeWycieczki = () => {
 
                 <Akordeon tripData={tripDataChild} />
               </div>
-            </motion.div>
-            <motion.div style={{ x: rightX }} className={styles.second_column}>
+            </div>
+            <div
+              data-sal="slide-left"
+              data-sal-delay="100"
+              data-sal-duration="800"
+              data-sal-easing="ease-in-out"
+              className={styles.second_column}
+            >
               <div className={styles.imageWrapper}>
                 <StaticImage
                   src="../../../images/wycieczki_z_dziecmi.png"
@@ -75,45 +70,58 @@ const MojeWycieczki = () => {
                   className={styles.image_bottom}
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
           <div className={`${styles.row} ${styles.row_reverse}`}>
-            <motion.div style={{ x: nextRightX }} className={styles.first_column}>
-              <div className={styles.content}>
-                <h4>Wycieczki z dziećmi</h4>
+            <div
+              data-sal="slide-left"
+              data-sal-delay="100"
+              data-sal-duration="800"
+              data-sal-easing="ease-in-out"
+              className={styles.first_column}
+            >
+              <div>
+                <h4>Wycieczki fakultatywne</h4>
+                <p>Wycieczki fakultatywne po Sudetach.</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.
+                  Cześć, jestem przewodnikiem sudeckim jeśli chcesz zorganizuję dla Ciebie dowolną wycieczkę
+                  fakultatywną. Możemy wybrać się razem w mniej znane skalne miasta, zwiedzić dawne ruiny zamków.
+                  Odwiedzić warowne miasta. Przejść śladem szańców z wojen śląskich i późniejszych konfliktów. Zdobyć
+                  najwyższe szczyty zaliczane do Korony Gór Polski, Korony Sudetów, Sudeckiego Włóczykija, Diademu Gór
+                  Polskich czy innych odznak górskich. Oferuję ponadto przejścia trasami długodystansowymi np. Głównym
+                  Szlakiem Sudeckim. Podczas wycieczek część tras możemy przemierzać pieszo lub autokarem, podziwiając
+                  wspaniały krajobraz górski i delektując się pięknymi widokami. Wierzcie mi – są niesamowite !!
                 </p>
               </div>
-              <div className={styles.content_image}>
+            </div>
+            <div
+              data-sal="slide-right"
+              data-sal-delay="100"
+              data-sal-duration="800"
+              data-sal-easing="ease-in-out"
+              className={styles.second_column}
+            >
+              <div className={styles.imageWrapper}>
                 <StaticImage
-                  src="../../../images/wycieczki_z_dziecmi_2.png"
+                  src="../../../images/wycieczki_fakultatywne_2.png"
                   alt="Wycieczki z dziećmi"
                   placeholder="blurred"
                   width={500}
                   quality={100}
                   layout="constrained"
-                  className={styles.image}
                 />
-              </div>
-            </motion.div>
-            <motion.div style={{ x: nextLeftX }} className={styles.second_column}>
-              <div className={styles.imageWrapper}>
+
                 <StaticImage
-                  src="../../../images/wycieczki_z_dziecmi.png"
+                  src="../../../images/wycieczki_fakultatywne_1.png"
                   alt="Wycieczki z dziećmi"
                   placeholder="blurred"
                   width={700}
                   quality={100}
                   layout="constrained"
-                  className={styles.image}
+                  className={styles.image_bottom}
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </Container>

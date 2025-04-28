@@ -14,12 +14,34 @@
   justify-content: center;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 12px;
   letter-spacing: 0.1rem;
   z-index: 10;
 
   .contact_item {
     margin: 20px 0;
-    transform: rotate(180deg); // odwracamy tekst w pionie
+    font-size: 0.9rem;
+    // transform: rotate(180deg); // odwracamy tekst w pionie
+  }
+
+  .contact_item_icon {
+    margin: 20px 0;
+    font-size: 20px;
+
+    a {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact_bar {
+    width: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+
+    .contact_item_icon {
+      margin: 10px 0;
+      font-size: 18px;
+    }
   }
 }

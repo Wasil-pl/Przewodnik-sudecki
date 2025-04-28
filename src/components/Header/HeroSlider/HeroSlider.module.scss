@@ -14,3 +14,14 @@
     fill: settings.$color-background-light;
   }
 }
+
+@media (max-width: 768px) {
+  .heroSlider {
+    height: 700px;
+
+    .shapeDivider {
+      bottom: -1px;
+      width: 150%;
+    }
+  }
+}

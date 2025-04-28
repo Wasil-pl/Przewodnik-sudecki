@@ -1,26 +1,12 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import * as styles from './OMnie.module.scss';
 import { Container } from 'react-bootstrap';
 import { StaticImage } from 'gatsby-plugin-image';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+
 import TytułSekcji from '../../Ui/TytułSekcji/TytułSekcji';
 
 const OMnie = () => {
-  const sectionAboutMeRef = useRef(null);
-  const nextRowRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionAboutMeRef,
-    offset: ['start end', 'center end'],
-  });
-
-  const { scrollYProgress: nextRowProgress } = useScroll({
-    target: nextRowRef,
-    offset: ['start end', 'center center'],
-  });
-
-  const leftX = useTransform(scrollYProgress, [0, 1], ['-100%', '0%']);
-  const rightX = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
-  const nextRowY = useTransform(nextRowProgress, [0, 1], ['200px', '0px']);
   return (
     <section id="omnie" className={styles.about_me}>
       <Container>
@@ -30,8 +16,14 @@ const OMnie = () => {
           subtitle="przewodnik sudecki Michał Filipowicz"
           backgroundText="O mnie"
         />
-        <div ref={sectionAboutMeRef} className={styles.wrapper}>
-          <motion.div style={{ x: leftX }} className={styles.first_column}>
+        <div className={styles.wrapper}>
+          <div
+            data-sal="slide-right"
+            data-sal-delay="200"
+            data-sal-duration="800"
+            data-sal-easing="ease-in-out"
+            className={styles.first_column}
+          >
             <h4>Cześć</h4>
             <p>
               Nazywam się <strong>Michał Filipowicz</strong> i jestem{' '}
@@ -54,8 +46,14 @@ const OMnie = () => {
               <em>skiturowe wyprawy po Sudetach</em>. Stawiam na <em>bezpieczeństwo</em>, dobrą atmosferę i dzielenie
               się wiedzą o przyrodzie, historii oraz kulturze regionu.
             </p>
-          </motion.div>
-          <motion.div style={{ x: rightX }} className={styles.second_column}>
+          </div>
+          <div
+            data-sal="slide-left"
+            data-sal-delay="200"
+            data-sal-duration="800"
+            data-sal-easing="ease-in-out"
+            className={styles.second_column}
+          >
             <StaticImage
               src="../../../images/omnie.png"
               alt="Przewodnik Sudecki, Instruktor narciarstwa zjazdowego, biegowego i skiturowego – Michał Filipowicz"
@@ -63,8 +61,14 @@ const OMnie = () => {
               width={600}
               quality={100}
             />
-          </motion.div>
-          <motion.div ref={nextRowRef} style={{ y: nextRowY }} className={styles.next_row}>
+          </div>
+          <div
+            data-sal="slide-up"
+            data-sal-delay="200"
+            data-sal-duration="800"
+            data-sal-easing="ease-in-out"
+            className={styles.next_row}
+          >
             <p>
               Z wykształcenia jestem <em>archeologiem</em>, absolwentem studiów doktoranckich na{' '}
               <em>Uniwersytecie Warszawskim</em>. Ukończyłem również kierunki <em>turystyka i rekreacja</em> oraz{' '}
@@ -113,7 +117,7 @@ const OMnie = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </Container>
     </section>

@@ -74,3 +74,13 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .accordion {
+    .accordion-item {
+      .accordion-body {
+        text-align: start;
+      }
+    }
+  }
+}

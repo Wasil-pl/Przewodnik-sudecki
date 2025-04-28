@@ -19,6 +19,11 @@
       height: auto;
     }
   }
+
+  .canvas_button {
+    background-color: settings.$color-background-light;
+    color: settings.$color-text-light;
+  }
 }
 
 .menu_wrapper {

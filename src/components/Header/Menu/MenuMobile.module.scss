@@ -2,8 +2,8 @@
 
 .canvas_button {
   background-color: transparent;
-  border-color: settings.$color-background-lighter;
-  color: settings.$color-text-light;
+  border-color: settings.$color-background-light;
+  color: settings.$color-background-light;
   font-size: 1.2rem;
   padding: 1px 10px 5px 10px;
 
@@ -23,8 +23,11 @@
   }
 
   .menu_image {
-    text-align: center;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   .lang {
@@ -43,4 +46,10 @@
       color: settings.$color-primary;
     }
   }
+}
+
+.scrolled {
+  background-color: transparent;
+  color: settings.$color-text-light;
+  border-color: settings.$color-background-light;
 }
